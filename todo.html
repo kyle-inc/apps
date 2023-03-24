@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <script data-ad-client="ca-pub-2139314102189443" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is description">
+    <meta name="keyword" content="tech, tech articles">
+    <!-- Here I can add my website is specialisded for what -->
+    <meta name="robots" content="index, follow">
+    <!-- Here I can add index/noindex and follow/nofollow for my website -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>
+        TODO
+    </title>
+
+    <!--For the to-do -->
+    <link rel="stylesheet" href="todo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <!-- Here is Icon of title -->
+    <link rel="icon" href="todo.png" type="image/x-icon">
+
+    <style>
+        /* For Internal CSS */
+
+        .todologo {
+            width: 25%;
+            float: center;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    
+
+    <div class="wrapper">
+        <!-- dark mode icon -->
+    <img src="darkmodeicon.png" alt="darkmode" id="modeicon">
+        <header> <img class="todologo" src="todo.png">
+            <h4 class="class1todo">Todo</h4>
+        </header>
+        <div class="inputField">
+            <input type="text" placeholder="Add your new todo">
+            <button><i class="fas fa-plus"></i></button>
+        </div>
+        <ul class="todoList">
+            <!-- data are comes from local storage -->
+        </ul>
+        <div class="footer">
+            <span>You have <span class="pendingTasks"></span> pending tasks</span>
+            <button>Clear All</button>
+        </div>
+    </div>
+
+    <script src="todo.js"></script>
+
+
+    <!-- dark mode java script -->
+    <script>
+        var icon = document.getElementById("modeicon");
+
+
+
+        if (localStorage.getItem("theme") == "null") {
+            localStorage.setItem("theme", "light");
+        }
+
+        let localData = localStorage.getItem("theme");
+
+        if (localData == "light") {
+            modeicon.src = "darkmodeicon.png";
+            document.body.classList.remove("dark-theme");
+        }
+        else if (localData == "dark") {
+            modeicon.src = "lightmodeicon.png";
+            document.body.classList.add("dark-theme");
+        }
+
+
+
+        icon.onclick = function () {
+            document.body.classList.toggle("dark-theme");
+            if (document.body.classList.contains("dark-theme")) {
+                modeicon.src = "lightmodeicon.png";
+
+                localStorage.setItem("theme", "dark");
+            } else {
+                modeicon.src = "darkmodeicon.png";
+
+                localStorage.setItem("theme", "light");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

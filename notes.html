@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+
+    <!-- Google Fonts Stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
+    <!-- Poppins @ Google Fonts -->
+    <!-- font-family: 'Poppins', sans-serif; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- Fredoka @ Google Fonts -->
+    <!-- font-family: 'Fredoka', sans-serif; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
+
+    <!-- Ununtu @ Google Fonts -->
+    <!-- font-family: 'Ubuntu', sans-serif; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+
+    <!-- kyle-webuniversal css -->
+    <link rel="stylesheet" href="kyle-webuniversal.css">
+
+    <title>
+        Notes
+    </title>
+
+    <!-- Here is Icon of title -->
+    <link rel="icon" href="notesicon.png" type="image/x-icon">
+
+    <style>
+        ::selection {
+            color: #4CAF50;
+            background: transparent;
+        }
+
+        .body {
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        .noteslogopara {
+            background-color: #06bcfb;
+            background-image: linear-gradient(315deg, #06bcfb 0%, #4884ee 74%);
+            top: 0;
+        }
+
+        .noteslogomain {
+            width: 10%;
+            padding: 1% 1%;
+        }
+
+        .alltextheading {
+            font-family: 'Varela Round', sans-serif;
+            font-size: 40px;
+        }
+
+        .body {
+            background-color: black;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="noteslogopara">
+        <center>
+            <img class="noteslogomain" src="noteslogo.png">
+        </center>
+    </nav>
+
+    <br><br><br>
+
+    <div class="container my-3">
+        <div class="card">
+            <div class="card-body">
+                <br>
+                <h5 class="card-titlel, alltextheading">
+                    Add a Note
+                </h5>
+                <br>
+                <div class="form-group">
+                    <textarea class="form-control" id="addTxt" rows="3">
+                    </textarea>
+                </div>
+                <br>
+                <button class="btn btn-primary" id="addBtn" style="background-color:green">
+                    Add Note
+                </button>
+                <br><br>
+            </div>
+        </div>
+
+        <br><br><br><br>
+
+        <hr>
+        <h1 class="alltextheading">Your Notes</h1>
+        <hr>
+
+        <br>
+
+        <div id="notes" class="row container-fluid">
+        </div>
+    </div>
+
+    <script src="notesjs.js"></script>
+
+
+    
+
+
+
+    
+
+    <footer style="margin-top: 35vh;">
+
+        <div class="content">
+
+            <div class="top">
+
+                <div class="logo-details">
+                    <img src="kylelogowhite.png" style="width: 9vw; padding: 5px 5px;" alt="">
+                </div>
+
+                <div class="media-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+
+            </div>
+
+            <div class="link-boxes">
+
+                <ul class="box">
+                    <li class="link_name">API</li>
+                    <li><a href="#">KYLE Search</a></li>
+                    <li><a href="#">TODO</a></li>
+                    <li><a href="#">Response</a></li>
+                    <li><a href="#">Notes</a></li>
+                </ul>
+
+                <ul class="box">
+                    <li class="link_name">Services</li>
+                    <li><a href="#">KYLE Search</a></li>
+                    <li><a href="#">TODO</a></li>
+                    <li><a href="#">Response</a></li>
+                    <li><a href="#">Notes</a></li>
+                </ul>
+
+                <ul class="box">
+                    <li class="link_name">Account</li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">My account</a></li>
+                    <li><a href="#">Prefrences</a></li>
+                    <li><a href="#">Purchase</a></li>
+                </ul>
+
+                <ul class="box">
+                    <li class="link_name">KYLE Devops</li>
+                    <li><a href="#">HTML & CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li><a href="#">Photography</a></li>
+                    <li><a href="#">Photoshop</a></li>
+                </ul>
+
+                <ul class="box input-box">
+                    <li class="link_name">Subscribe</li>
+                    <li><input type="text" placeholder="Enter your email"></li>
+                    <li><input type="button" value="Subscribe"></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="bottom-details">
+
+            <div class="bottom_text">
+
+                <span class="copyright_text">Copyright © 2022 <a href="#">KYLE.inc.</a>All rights reserved</span>
+
+                <span class="policy_terms">
+                    <a href="#">Privacy policy</a>
+                    <a href="#">Terms & condition</a>
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

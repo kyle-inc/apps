@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is description">
+    <meta name="keyword" content="tech, tech articles">
+    <!-- Here I can add my website is specialisded for what -->
+    <meta name="robots" content="index, follow">
+    <!-- Here I can add index/noindex and follow/nofollow for my website -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Google Fonts Stylesheet For KYLE-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
+    <title>
+        KYLE Looks
+    </title>
+
+    <!-- Here is Icon of title -->
+    <link rel="icon" href="kylelooks.png" type="image/x-icon">
+
+    <!-- Here I have to include my CSS file named SINUSOIDAL.css -->
+    <link rel="stylesheet" href="kyle.css">
+
+    <!-- Here I have to include my JavaScript named SINUSOIDAL.js -->
+    <script src="SINUSOIDAL.js"></script>
+
+    <style>
+        /* For internal CSS */
+        
+         ::selection {
+            color: silver;
+            background: transparent;
+        }
+        
+        .body {
+            margin: 0;
+        }
+        
+        .button2 {
+            width: 15%;
+            height: 7%;
+            padding: 3px 10px;
+            border: 1px solid transparent;
+            border-radius: 10px;
+            box-sizing: border-box;
+            transition-duration: 0.9s;
+            top: 85%;
+            right: 11%;
+            position: fixed;
+            text-align: center;
+            font-size: 20px;
+        }
+        
+        .button1 {
+            background-color: #1e90ff;
+            color: white;
+        }
+        
+        .button1:hover {
+            background-color: #4169e1;
+            color: silver;
+        }
+        
+        .backbt {
+            font-family: 'Varela Round', sans-serif;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #videoElement {
+            width: 55%;
+            background-color: transparent;
+            border: 2px;
+            border-radius: 20px;
+            box-sizing: border-box;
+            margin-left: 3%;
+            margin-top: 2%;
+        }
+        
+        .logo {
+            top: 30%;
+            right: 14%;
+            width: 9%;
+            height: 17%;
+            position: fixed;
+        }
+        
+        .logoname {
+            font-size: 25px;
+            font-weight: bold;
+            top: 42%;
+            right: 18%;
+            position: fixed;
+        }
+        
+        body {
+            background-color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Here is KYLE Logo-->
+
+
+
+    <img class="logo" src="kylelooks.png">
+
+    <button class="button2 button1" onclick="goBack()">
+        <font class="backbt">Back</font>
+    </button>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
+
+    <video autoplay="true" id="videoElement" controls>
+    </video>
+
+    <script>
+        var video = document.querySelector("#videoElement");
+
+        if (navigator.mediaDevices.getUserMedia) {
+            navigator.mediaDevices.getUserMedia({
+                    video: true
+                })
+                .then(function(stream) {
+                    video.srcObject = stream;
+                })
+                .catch(function(err0r) {
+                    console.log("Something went wrong!");
+                });
+        }
+    </script>
+
+</body>
+
+</html>
