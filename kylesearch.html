@@ -56,17 +56,6 @@
 <title>KYLE Search</title>
 
 <style>
-    ::selection {
-        color: #4CAF50;
-        background: transparent;
-    }
-
-    body,
-    html {
-        height: 100%;
-        margin: 0;
-    }
-
     /* .background {
             width: 430px;
             height: 520px;
@@ -95,6 +84,19 @@
             right: -30px;
             bottom: -80px;
         } */
+
+
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+
+    ::selection {
+        color: #4CAF50;
+        background: transparent;
+    }
 
     a {
         color: transparent;
@@ -146,11 +148,19 @@
         padding: 1% 1%;
     }
 
-    .searchlogo {
+    .kyle-search-branding {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .kyle-search-branding img {
+        /* max-width: 50vh; */
         width: auto;
-        max-width: 50vh;
-        min-width: 200px;
+        max-width: 25vw;
+        min-width: 300px;
         margin-top: 30vh;
+        margin-right: 1vh;
     }
 
     input.searchfieldinput {
@@ -161,9 +171,9 @@
         font-size: 18px;
         background-color: white;
         background-image: url('searchicon.png');
-        background-position: 10px 10px;
+        background-position: 10px 8px;
         background-repeat: no-repeat;
-        padding: 10px 20px 10px 48px;
+        padding: 5px 20px 5px 48px;
         font-family: 'Varela Round', sans-serif;
         width: auto;
         min-width: 350px;
@@ -187,13 +197,13 @@
         width: 22%;
         color: silver;
         text-align: left;
-        padding: 5px 30px;
+        padding: 40px 20px;
         text-decoration: none;
         font-size: 12px;
     }
 
     .kylelogo {
-        width: 17vh;
+        width: 10vh;
     }
 </style>
 
@@ -285,9 +295,9 @@
         </ul>
     </div>
 
-    <center>
+    <div class="kyle-search-branding">
         <img class="searchlogo" src="KYLEsearchLogo.png">
-    </center>
+    </div>
 
     <center>
         <form class="kylesearch" action="https://www.google.com/search?q=KYLESearch">
