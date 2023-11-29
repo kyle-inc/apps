@@ -205,6 +205,53 @@
     .kylelogo {
         width: 10vh;
     }
+
+
+
+    /* ===========================
+   ====== Search Box ====== 
+   =========================== */
+
+    .search {
+        margin: auto;
+        width: 50%;
+        min-width: 350px;
+        border: 3px solid black;
+        overflow: auto;
+        border-radius: 5px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 44px;
+    }
+
+    .search input[type="text"] {
+        border: 0px;
+        width: 90%;
+        padding: 10px 40px;
+
+        background-image: url('searchicon.png');
+        background-position: 12px 10px;
+        background-repeat: no-repeat;
+    }
+
+    .search input[type="text"]:focus {
+        
+        outline: 0;
+    }
+
+    .search input[type="submit"] {
+        width: 10%;
+        border: 0px;
+        background: none;
+        background-color: black;
+        color: #fff;
+        float: right;
+        padding: 10px;
+        -moz-border-radius-top-right: 5px;
+        -webkit-border-radius-top-right: 5px;
+        -moz-border-radius-bottom-right: 5px;
+        -webkit-border-radius-bottom-right: 5px;
+        cursor: pointer;
+    }
 </style>
 
 </head>
@@ -303,11 +350,19 @@
         <form class="kylesearch" action="https://www.google.com/search?q=KYLESearch">
             <input class="searchfieldinput" autocomplete="on" history="on" name="q" class="fntbox" type="text"
                 placeholder="Search with KYLE on Google">
+            <input type="submit" value="Submit">
         </form>
     </center>
 
+    <div class="search">
+        <form class="search-form" action="https://www.google.com/search?q=KYLESearch">
+            <input type="text" autocomplete="on" history="on" name="q" placeholder="Search with KYLE on Google">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+
     <div class="kylelogopara">
-        <a href="https://kyle.w3spaces.com">
+        <a href="https://kyle-inc.github.io/kyle.com">
             <img class="kylelogo" src="kylelogoblack.png">
         </a>
     </div>
