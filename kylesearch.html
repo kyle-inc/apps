@@ -157,10 +157,10 @@
     .kyle-search-branding img {
         /* max-width: 50vh; */
         width: auto;
-        max-width: 25vw;
-        min-width: 300px;
+        max-width: 28vw;
+        min-width: 350px;
         margin-top: 30vh;
-        margin-right: 1vh;
+        /* margin-right: 1vh; */
     }
 
     input.searchfieldinput {
@@ -208,49 +208,55 @@
 
 
 
-    /* ===========================
-   ====== Search Box ====== 
-   =========================== */
+    /* new search box css */
+    @import url('https://fonts.googleapis.com/css?family=Lato');
 
-    .search {
-        margin: auto;
-        width: 50%;
-        min-width: 350px;
-        border: 3px solid black;
-        overflow: auto;
-        border-radius: 5px;
-        -moz-border-radius: 5px;
-        -webkit-border-radius: 44px;
+    * {
+        box-sizing: border-box;
+        font-family: 'Lato', sans-serif;
     }
 
-    .search input[type="text"] {
-        border: 0px;
-        width: 90%;
-        padding: 10px 40px;
+    .autocomplete-search-box {
+        width: 50%;
+        box-shadow: 0 2px 10px 0px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        overflow: hidden;
+        margin: auto;
+        min-width: 350px;
+        margin-top: 4vh;
+    }
+
+    .autocomplete-search-box .search-box {
+        width: 100%;
+        height: 40px;
+        padding: 25px 20px;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        font-size: 20px;
 
         background-image: url('searchicon.png');
-        background-position: 12px 10px;
+        background-size: auto;
+        background-position: 15px 15px;
         background-repeat: no-repeat;
+        padding-left: 50px;
     }
 
-    .search input[type="text"]:focus {
-        
-        outline: 0;
+    .autocomplete-search-box .search-result {
+        width: 100%;
+        padding: 0;
+        margin: 0;
     }
 
-    .search input[type="submit"] {
-        width: 10%;
-        border: 0px;
-        background: none;
-        background-color: black;
-        color: #fff;
-        float: right;
-        padding: 10px;
-        -moz-border-radius-top-right: 5px;
-        -webkit-border-radius-top-right: 5px;
-        -moz-border-radius-bottom-right: 5px;
-        -webkit-border-radius-bottom-right: 5px;
-        cursor: pointer;
+    .autocomplete-search-box .search-result li {
+        width: 100%;
+        list-style-type: none;
+        padding: 10px 20px;
+    }
+
+    .autocomplete-search-box .search-result li:hover {
+        background: #3498db;
+        color: white;
     }
 </style>
 
@@ -346,19 +352,23 @@
         <img class="searchlogo" src="KYLEsearchLogo.png">
     </div>
 
-    <center>
+
+
+
+    <!-- <center>
         <form class="kylesearch" action="https://www.google.com/search?q=KYLESearch">
             <input class="searchfieldinput" autocomplete="on" history="on" name="q" class="fntbox" type="text" placeholder="Search with KYLE on Google">
-            <!-- <input type="submit" value="Submit"> -->
         </form>
-    </center>
+    </center> -->
 
-    <!-- <div class="search">
-        <form class="search-form" action="https://www.google.com/search?q=KYLESearch">
-            <input type="text" autocomplete="on" history="on" name="q" placeholder="Search with KYLE on Google">
-            <input type="submit" value="Search">
+    <div class="autocomplete-search-box">
+        <form action="https://www.google.com/search?q=KYLESearch">
+            <input type="text" name="q" class="search-box" placeholder="Search on Google with Kyle" />
         </form>
-    </div> -->
+    </div>
+
+
+
 
     <div class="kylelogopara">
         <a href="https://kyle-inc.github.io/kyle.com">
