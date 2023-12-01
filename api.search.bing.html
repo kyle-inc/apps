@@ -56,17 +56,6 @@
 <title>KYLE Search</title>
 
 <style>
-    ::selection {
-        color: #4CAF50;
-        background: transparent;
-    }
-
-    body,
-    html {
-        height: 100%;
-        margin: 0;
-    }
-
     /* .background {
             width: 430px;
             height: 520px;
@@ -95,6 +84,19 @@
             right: -30px;
             bottom: -80px;
         } */
+
+
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+
+    ::selection {
+        color: grey;
+        background: transparent;
+    }
 
     a {
         color: transparent;
@@ -131,26 +133,35 @@
     }
 
     .todologo {
-        width: 17vh;
+        width: 14vh;
         padding: 0.5vw 0.5vw;
     }
 
     .webmarks {
-        width: 13vh;
+        width: 12vh;
         padding: 1% 1%;
     }
 
     .klooks {
-        width: 12.5vh;
+        width: 11.5vh;
         margin-top: 1px;
         padding: 1% 1%;
     }
 
-    .searchlogo {
+    .kyle-search-branding {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .kyle-search-branding img {
+        /* max-width: 50vh; */
+        max-width: 26vw;
         width: auto;
-        max-width: 50vh;
-        min-width: 200px;
+        /* max-width: 55vh; */
+        min-width: 305px;
         margin-top: 30vh;
+        /* margin-right: 1vh; */
     }
 
     input.searchfieldinput {
@@ -161,9 +172,9 @@
         font-size: 18px;
         background-color: white;
         background-image: url('searchicon.png');
-        background-position: 10px 10px;
+        background-position: 10px 8px;
         background-repeat: no-repeat;
-        padding: 10px 20px 10px 48px;
+        padding: 5px 20px 5px 48px;
         font-family: 'Varela Round', sans-serif;
         width: auto;
         min-width: 350px;
@@ -176,24 +187,78 @@
     input.searchfieldinput:focus {
         /* width: 80%; */
         box-sizing: border-box;
-        border: 4px solid #00BFFF;
-        border-radius: 44px;
+        /* border: 4px solid #00BFFF;
+        border-radius: 44px; */
         outline: none !important;
     }
 
     .kylelogopara {
         position: fixed;
-        top: 90%;
+        top: 88%;
         width: 22%;
         color: silver;
         text-align: left;
-        padding: 5px 30px;
+        padding: 40px 20px;
         text-decoration: none;
         font-size: 12px;
     }
 
     .kylelogo {
-        width: 17vh;
+        width: 10vh;
+    }
+
+
+
+    /* new search box css */
+    @import url('https://fonts.googleapis.com/css?family=Lato');
+
+    * {
+        box-sizing: border-box;
+        font-family: 'Lato', sans-serif;
+    }
+
+    .autocomplete-search-box {
+        width: 50%;
+        /* box-shadow: 0 2px 10px 0px rgba(0, 0, 0, 0.25); */
+        box-shadow: 0 2px 10px 0px transparent;
+        border-radius: 10px;
+        overflow: hidden;
+        margin: auto;
+        min-width: 330px;
+        margin-top: 5vh;
+    }
+
+    .autocomplete-search-box .search-box {
+        width: 100%;
+        height: 40px;
+        padding: 23px 20px;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        font-size: 18.5px;
+
+        background-image: url('searchicon.png');
+        background-size: auto;
+        background-position: 13px 12px;
+        background-repeat: no-repeat;
+        padding-left: 45px;
+    }
+
+    .autocomplete-search-box .search-result {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .autocomplete-search-box .search-result li {
+        width: 100%;
+        list-style-type: none;
+        padding: 10px 20px;
+    }
+
+    .autocomplete-search-box .search-result li:hover {
+        background: #3498db;
+        color: white;
     }
 </style>
 
@@ -236,11 +301,11 @@
             </li> -->
 
             <li class="nav-item">
-                <a class="nav-link" href="kylesearch.html">Google</a>
+                <a class="nav-link">Google</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link active">Bing</a>
+                <a class="nav-link active" href="api.search.bing.html">Bing</a>
             </li>
 
             <li class="nav-item">
@@ -285,16 +350,27 @@
         </ul>
     </div>
 
-    <center>
+    <div class="kyle-search-branding">
         <img class="searchlogo" src="KYLEsearchLogo.png">
-    </center>
+    </div>
 
-    <center>
-        <form class="kylesearch" action="https://www.bing.com/search?q=kyle.search.api">
-            <input class="searchfieldinput" autocomplete="on" history="on" name="q" class="fntbox" type="text"
-                placeholder="Search with KYLE on Bing">
+
+
+
+    <!-- <center>
+        <form class="kylesearch" action="https://www.google.com/search?q=KYLESearch">
+            <input class="searchfieldinput" autocomplete="on" history="on" name="q" class="fntbox" type="text" placeholder="Search with KYLE on Google">
         </form>
-    </center>
+    </center> -->
+
+    <div class="autocomplete-search-box">
+        <form action="https://www.bing.com/search?q=kyle.search.api">
+            <input type="text" name="q" class="search-box" placeholder="Search on Bing with Kyle" />
+        </form>
+    </div>
+
+
+
 
     <div class="kylelogopara">
         <a href="https://kyle-inc.github.io/kyle.com">
