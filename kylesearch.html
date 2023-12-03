@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="This is description">
+
+    <!-- Here is Icon of title -->
+    <link rel="icon" href="kylesearch.png" type="image/x-icon">
+    <title>KYLE Search</title>
+
+    <!-- Here I can add my website is specialisded for what -->
+    <meta name="keyword" content="tech, tech articles">
+
+    <!-- Here I can add index/noindex and follow/nofollow for my website -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Here I have to include my CSS file -->
+    <link rel="stylesheet" href=".css">
+
+    <!-- Poppins @ Google Fonts -->
+    <!-- font-family: 'Poppins', sans-serif; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- Fredoka @ Google Fonts -->
+    <!-- font-family: 'Fredoka', sans-serif; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
+
+    <!-- Ununtu @ Google Fonts -->
+    <!-- font-family: 'Ubuntu', sans-serif; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+
+</head>
+
+<style>
+    a {
+        text-decoration: none;
+    }
+
+
+    /* ------------------- Scroll Bar ------------------- */
+
+    /* width */
+    ::-webkit-scrollbar {
+        width: 0.75vw;
+        background-color: transparent;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        /* border-radius: 10px; */
+        background-color: transparent;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: grey;
+        border-radius: 40px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: silver;
+    }
+
+
+
+    body {
+        /* background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%); */
+        background-color: #f0f0f0;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        top: 0;
+        border: none;
+    }
+
+    .divKYLEsearchLogo1 {
+        position: fixed;
+        top: 0;
+        background-color: white;
+        width: 100vw;
+    }
+
+    .imgKYLEsearchLogo1 {
+        width: 15vw;
+        display: block;
+        margin: auto;
+        padding: 1vh 0;
+    }
+
+    .content {
+        margin-top: 4vw;
+    }
+
+    .welcomeheading {
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 55px;
+        padding-left: 5vw;
+        padding-top: 35vh;
+    }
+
+    .welcomenote {
+        font-family: 'Fredoka', sans-serif;
+        font-size: 25px;
+        padding-left: 5vw;
+        margin-top: 0;
+    }
+
+    .gettingstartedheading {
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 55px;
+        padding-left: 5vw;
+        padding-top: 70vh;
+    }
+
+    .gettingstartednote {
+        font-family: 'Fredoka', sans-serif;
+        font-size: 25px;
+        font-weight: bold;
+        padding-left: 5vw;
+    }
+
+    .apisoption {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
+        height: 70vh;
+        align-items: center;
+    }
+
+    .apisoption img {
+        padding: 0 0;
+    }
+</style>
+
+<body>
+
+    <div class="divKYLEsearchLogo1">
+        <img class="imgKYLEsearchLogo1" src="KYLEsearchLogo.png" alt="KYLEsearchLogo">
+    </div>
+
+    <div class="content">
+        <h1 class="welcomeheading">Welcome to KYLE Search</h1>
+        <h2 class="welcomenote">With KYLE Search you can do amazing things with your current search engine.</h2>
+        <h2 class="welcomenote">Lets get started...</h2>
+
+        <h2 class="gettingstartedheading">
+            Getting Started__
+        </h2>
+
+        <div class="gettingstartednote">
+            KYLE Search works best with the 3 most used search engines right now
+        </div>
+
+        <div class="apisoption">
+
+            <a href="api.search.google.html">
+                <img style="width: 6vw;" src="googlesearch.png" alt="">
+            </a>
+
+            <a href="api.search.bing.html">
+                <img style="width: 4vw;" src="bingsearch.png" alt="">
+            </a>
+
+            <a href="api.search.bing.html">
+                <img style="width: 6.5vw;" src="bravesearch.png" alt="">
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
