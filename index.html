@@ -35,7 +35,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
 
     <!-- kyle-webuniversal css -->
-    <link rel="stylesheet" href="kyle-webuniversal.css">
+    <link rel="stylesheet" href=".css">
 
 
     <title>
@@ -54,50 +54,79 @@
         }
 
         body {
-            margin: 0;
-            width: 100%;
+            font-family: 'Ubuntu', sans-serif;
+            background-color: #DDE6ED;
             background-repeat: no-repeat;
             background-attachment: fixed;
-            background-size: cover;
-            font-family: 'Ubuntu', sans-serif;
-            border: none;
-            height: 100%;
+            margin: 0;
+            border: 0;
             top: 0;
-            visibility: visible;
-            width: 100%;
-            background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
         }
 
         a {
-            color: black;
+            color: transparent;
             text-decoration: none;
         }
 
-        input[type=text] {
-            width: 85vw;
-            padding: 10px 20px 10px 45px;
-            -webkit-transition: width 0.4s ease-in-out;
-            transition: width 2s ease-in-out;
-            font-family: 'Varela Round', sans-serif;
-            margin-top: 15vh;
-            box-sizing: border-box;
-            border: 04px solid grey;
-            border-radius: 10px;
-            font-size: 18px;
-            background-color: white;
-            background-image: url('searchicon.png');
-            background-position: 10px 10px;
-            background-repeat: no-repeat;
+
+        .logonav-index {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #9DB2BF;
         }
 
-        input[type=text]:focus {
-            /* width: 78%; */
-            box-sizing: border-box;
-            border: 4px solid #00BFFF;
-            border-radius: 10px;
-            background-color: white;
-            outline: none !important;
+        .appsicon {
+            width: 10vh;
+            min-width: 75px;
+            padding: 0.6vw 1vw;
         }
+
+        .appsselectionbox {
+            width: 100%;
+            margin-top: 12vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-content: center;
+            flex-wrap: wrap;
+            height: 85vh;
+            gap: 15px;
+        }
+
+        .appsselectionbox-searchicon {
+            width: 12vh;
+            padding-left: 1%;
+            padding-right: 1%;
+            padding-top: 15%;
+        }
+
+        .appsselectionbox-todoicon {
+            width: 15vh;
+            padding: 1% 5%;
+        }
+
+        .appsselectionbox-responseicon {
+            width: 14vh;
+            padding-left: 1%;
+            padding-right: 1%;
+            padding-top: 15%;
+        }
+
+        .appsselectionbox-notesicon {
+            width: 10vh;
+            padding-left: 1%;
+            padding-right: 1%;
+            padding-top: 30%;
+        }
+
+        .appsselectionbox-calculatoricon {
+            width: 9vh;
+            padding-left: 1%;
+            padding-right: 1%;
+            padding-top: 35%;
+        }
+
     </style>
 
 </head>
@@ -112,132 +141,29 @@
 
     </div>
 
-    <p class="appsselectionbox">
+    <div class="appsselectionbox">
 
-        <center>
-
-            <a href="api.search.google.html">
-                <img class="appsselectionbox-searchicon" src="kylesearch.png">
-            </a>
-
-            <a href="todo.html">
-                <img class="appsselectionbox-todoicon" src="todo.png">
-            </a>
-
-            <a href="https://response-web.000webhostapp.com/login.php">
-                <img class="appsselectionbox-responseicon" src="responseicon.png">
-            </a>
-
-            <a href="notes.html">
-                <img class="appsselectionbox-notesicon" src="notesicon.png">
-            </a>
-
-            <a href="calculator.html">
-                <img class="appsselectionbox-calculatoricon" src="calculatorlogo.png">
-            </a>
-
-        </center>
-
-        <center>
-            <form class="kylesearch" action="https://www.google.com/search?q=KYLESearch">
-                <input class="searchfieldinput" autocomplete="on" history="on" name="q" class="fntbox" type="text"
-                    placeholder="Search with KYLE on Google">
-            </form>
-        </center>
-
-    </p>
-
-    <!-- <div class="kylelogopara">
-        <a href="https://kyle-inc.github.io/kyle.com">
-            <img class="kylelogo" src="KYLElogo.png">
+        <a href="api.search.google.html">
+            <img class="appsselectionbox-searchicon" src="kylesearch.png">
         </a>
-    </div> -->
 
+        <a href="todo.html">
+            <img class="appsselectionbox-todoicon" src="todo.png">
+        </a>
 
+        <a href="https://response-web.000webhostapp.com/login.php">
+            <img class="appsselectionbox-responseicon" src="responseicon.png">
+        </a>
 
+        <a href="notes.html">
+            <img class="appsselectionbox-notesicon" src="notesicon.png">
+        </a>
 
+        <a href="calculator.html">
+            <img class="appsselectionbox-calculatoricon" src="calculatorlogo.png">
+        </a>
 
-
-    <footer style="margin-top: 35vh;">
-
-        <div class="content">
-
-            <div class="top">
-
-                <div class="logo-details">
-                    <img src="kylelogowhite.png" style="width: 20vh; padding: 5px 5px;" alt="">
-                </div>
-
-                <div class="media-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                </div>
-
-            </div>
-
-            <div class="link-boxes">
-
-                <ul class="box">
-                    <li class="link_name">API</li>
-                    <li><a href="#">KYLE Search</a></li>
-                    <li><a href="#">TODO</a></li>
-                    <li><a href="#">Response</a></li>
-                    <li><a href="#">Notes</a></li>
-                </ul>
-
-                <ul class="box">
-                    <li class="link_name">Services</li>
-                    <li><a href="#">KYLE Search</a></li>
-                    <li><a href="#">TODO</a></li>
-                    <li><a href="#">Response</a></li>
-                    <li><a href="#">Notes</a></li>
-                </ul>
-
-                <ul class="box">
-                    <li class="link_name">Account</li>
-                    <li><a href="#">Profile</a></li>
-                    <li><a href="#">My account</a></li>
-                    <li><a href="#">Prefrences</a></li>
-                    <li><a href="#">Purchase</a></li>
-                </ul>
-
-                <ul class="box">
-                    <li class="link_name">KYLE Devops</li>
-                    <li><a href="#">HTML & CSS</a></li>
-                    <li><a href="#">JavaScript</a></li>
-                    <li><a href="#">Photography</a></li>
-                    <li><a href="#">Photoshop</a></li>
-                </ul>
-
-                <ul class="box input-box">
-                    <li class="link_name">Subscribe</li>
-                    <li><input type="text" placeholder="Enter your email"></li>
-                    <li><input type="button" value="Subscribe"></li>
-                </ul>
-
-            </div>
-
-        </div>
-
-        <div class="bottom-details">
-
-            <div class="bottom_text">
-
-                <span class="copyright_text">Copyright © 2022 <a href="#">KYLE.inc.</a>All rights reserved</span>
-
-                <span class="policy_terms">
-                    <a href="#">Privacy policy</a>
-                    <a href="#">Terms & condition</a>
-                </span>
-
-            </div>
-
-        </div>
-
-    </footer>
+    </div>
 
 </body>
 
