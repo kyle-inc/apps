@@ -4,22 +4,12 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="This is description">
-
-    <!-- Here is Icon of title -->
-    <link rel="icon" href="kylesearch.png" type="image/x-icon">
-    <title>KYLE Search</title>
-
-    <!-- Here I can add my website is specialisded for what -->
-    <meta name="keyword" content="tech, tech articles">
-
-    <!-- Here I can add index/noindex and follow/nofollow for my website -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="description" content="This is description"> -->
+    <meta name="keyword" content="KYLE Search, KYLE, Kyle, Kyle Search, Search, K Search">
     <meta name="robots" content="index, follow">
-
-    <!-- Here I have to include my CSS file -->
-    <link rel="stylesheet" href=".css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Poppins @ Google Fonts -->
     <!-- font-family: 'Poppins', sans-serif; -->
@@ -39,6 +29,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="kyleweb.css">
+
+    <link rel="icon" href="kylesearch.png" type="image/x-icon">
+    <title>KYLE Search</title>
 
 </head>
 
@@ -173,6 +167,16 @@
 </style>
 
 <body>
+
+    <div id="fadein"></div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            setTimeout(function () {
+                document.getElementById("fadein").remove();
+            }, 1000);
+        };
+    </script>
 
     <div class="logonav">
         <img class="KYLEsearchImage" src="KYLEsearchLogo.png" alt="KYLEsearchLogo">
