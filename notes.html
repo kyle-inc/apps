@@ -37,6 +37,8 @@
     <!-- Fontawesome CDN Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
 
+    <link rel="stylesheet" href="kyleweb.css">
+
     <title>Notes</title>
     <link rel="icon" href="notesicon.png" type="image/x-icon">
 
@@ -97,6 +99,17 @@
 </head>
 
 <body>
+
+    <div id="fadein"></div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            setTimeout(function () {
+                document.getElementById("fadein").remove();
+            }, 1000);
+        };
+    </script>
+
     <nav class="noteslogopara">
         <center>
             <img class="noteslogomain" src="noteslogo.png">

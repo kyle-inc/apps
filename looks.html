@@ -18,12 +18,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
 
-    <title>
-        KYLE Looks
-    </title>
+    <title>Mirror</title>
 
     <!-- Here is Icon of title -->
-    <link rel="icon" href="kylelooks.png" type="image/x-icon">
+    <link rel="icon" href="KYLEicon.png" type="image/x-icon">
 
     <!-- Here I have to include my CSS file named SINUSOIDAL.css -->
     <link rel="stylesheet" href="kyle.css">
@@ -33,12 +31,12 @@
 
     <style>
         /* For internal CSS */
-        
-         ::selection {
+
+        ::selection {
             color: silver;
             background: transparent;
         }
-        
+
         .body {
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -46,64 +44,40 @@
             border: 0;
             top: 0;
         }
-        
-        .button2 {
-            width: 15%;
-            height: 7%;
-            padding: 3px 10px;
-            border: 1px solid transparent;
-            border-radius: 10px;
-            box-sizing: border-box;
-            transition-duration: 0.9s;
-            top: 85%;
-            right: 11%;
-            position: fixed;
-            text-align: center;
-            font-size: 20px;
-        }
-        
+
         .button1 {
+            display: block;
+            margin: auto;
+            width: 55vw;
+            margin-top: 4vh;
+            padding: 7px 0px;
+            box-sizing: border-box;
+            border-radius: 15px;
+            border: 2px solid black;
+            transition-duration: 0.1s;
             background-color: #1e90ff;
             color: white;
-        }
-        
-        .button1:hover {
-            background-color: #4169e1;
-            color: silver;
-        }
-        
-        .backbt {
             font-family: 'Varela Round', sans-serif;
             font-size: 20px;
             text-align: center;
         }
-        
+
+        .button1:hover {
+            background-color: #4169e1;
+            color: silver;
+        }
+
         #videoElement {
-            width: 55%;
+            width: 55vw;
+            min-width: 800px;
             background-color: transparent;
-            border: 2px;
             border-radius: 20px;
             box-sizing: border-box;
-            margin-left: 3%;
-            margin-top: 2%;
+            display: block;
+            margin: auto;
+
         }
-        
-        .logo {
-            top: 30%;
-            right: 14%;
-            width: 9%;
-            height: 17%;
-            position: fixed;
-        }
-        
-        .logoname {
-            font-size: 25px;
-            font-weight: bold;
-            top: 42%;
-            right: 18%;
-            position: fixed;
-        }
-        
+
         body {
             background-color: white;
         }
@@ -113,20 +87,14 @@
 
 <body>
 
-    <!-- Here is KYLE Logo-->
-
-
-
-    <img class="logo" src="kylelooks.png">
-
-    <button class="button2 button1" onclick="goBack()">
-        <font class="backbt">Back</font>
-    </button>
-
-    <script>
-        function goBack() {
-            window.history.back();
-        }
+    <div id="fadein"></div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            setTimeout(function () {
+                document.getElementById("fadein").remove();
+            }, 1000);
+        };
     </script>
 
 
@@ -138,14 +106,22 @@
 
         if (navigator.mediaDevices.getUserMedia) {
             navigator.mediaDevices.getUserMedia({
-                    video: true
-                })
-                .then(function(stream) {
+                video: true
+            })
+                .then(function (stream) {
                     video.srcObject = stream;
                 })
-                .catch(function(err0r) {
+                .catch(function (err0r) {
                     console.log("Something went wrong!");
                 });
+        }
+    </script>
+
+    <button class="button1" onclick="goBack()"> Back </button>
+
+    <script>
+        function goBack() {
+            window.history.back();
         }
     </script>
 
