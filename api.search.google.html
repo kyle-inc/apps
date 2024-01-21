@@ -1,3 +1,5 @@
+<!-- https://www.google.com/search?q=KYLESearch -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,7 +54,7 @@
     }
 
     a {
-        color: transparent;
+        color: red;
         text-decoration: none;
     }
 
@@ -65,9 +67,21 @@
         top: 0;
     }
 
+    div.selection-box {
+        display: flex;
+        width: 100%;
+        padding: 8px 10px;
+        padding-left: 16px;
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 30px;
+        background-color: transparent;
+    }
+
     div.websites {
         position: fixed;
-        top: 4.5vh;
+        top: 5vh;
         left: 0px;
         right: 0px;
         width: 100vw;
@@ -155,7 +169,6 @@
     }
 
 
-
     .kylelogopara {
         position: fixed;
         top: 88%;
@@ -170,19 +183,28 @@
     .kylelogo {
         width: 10vh;
     }
-    
 </style>
 
 <body>
 
-    <!-- For sign in option in KYLE Search -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
-        </script>
+    <div class="selection-box">
+
+        <a href="api.search.google.html">
+            <img src="https://kyle-inc.github.io/resource/kylesearch/googlesearch.png" alt="Google" style="width: 4vh;">
+        </a>
+
+        <a href="api.search.bing.html">
+            <img src="https://kyle-inc.github.io/resource/kylesearch/bingsearch.png" alt="Bing" style="width: 2.75vh;">
+        </a>
+
+        <a href="api.search.brave.html">
+            <img src="https://kyle-inc.github.io/resource/kylesearch/bravesearch.png" alt="Brave" style="width: 4vh;">
+        </a>
+
+    </div>
 
     <div class="websites">
         <center>
-
             <a href="todo.html">
                 <img class="todologo" src="https://kyle-inc.github.io/resource/todo/todo.png">
             </a>
@@ -194,72 +216,12 @@
             <a href="notes.html">
                 <img class="notes" src="https://kyle-inc.github.io/resource/notes/notesicon.png">
             </a>
-
         </center>
     </div>
-
-    <div>
-        <ul class="nav nav-pills">
-
-            <li class="nav-item">
-                <a class="nav-link active" href="api.search.google.html">Google</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="api.search.bing.html">Bing</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="api.search.brave.html">Brave</a>
-            </li>
-
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
-                    aria-expanded="false">Sign In</a>
-
-                <div class="dropdown-menu">
-                    <form class="px-4 py-3">
-                        <div class="mb-3">
-                            <label for="exampleDropdownFormEmail1" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="exampleDropdownFormEmail1"
-                                placeholder="email@example.com">
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleDropdownFormPassword1" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="exampleDropdownFormPassword1"
-                                placeholder="Password">
-                        </div>
-                        <div class="mb-3">
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="dropdownCheck">
-                                <label class="form-check-label" for="dropdownCheck">
-                                    Remember me
-                                </label>
-                            </div>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Sign in</button>
-                    </form>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">New around here? Sign up</a>
-                    <a class="dropdown-item" href="#">Forgot password?</a>
-                </div>
-            </li>
-
-            <!-- <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
-            </li> -->
-        </ul>
-    </div>
-
-
-
 
     <div class="kyle-search-branding">
         <img class="searchlogo" src="https://kyle-inc.github.io/resource/kylesearch/KYLE Search Logo.png">
     </div>
-
-
-
 
     <!-- searchbox from medium.com link=https://medium.com/@nguynvithng_34102/making-a-simple-autocomplete-search-box-639b26a372cd -->
     <div class="autocomplete-search-box">
@@ -268,15 +230,11 @@
         </form>
     </div>
 
-
-
-
     <div class="kylelogopara">
         <a href="https://kyle-inc.github.io/kyle.com">
             <img class="kylelogo" src="https://kyle-inc.github.io/resource/kyle/kylelogoblack.png">
         </a>
     </div>
-
 
 </body>
 
